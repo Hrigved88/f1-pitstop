@@ -1,64 +1,43 @@
-# f1-pitstop
-# 🏎️ Formula 1 Pit Stop & Race Strategy Analyzer
+# 🏎️ Formula 1 Pit Stop Optimizer Dashboard
 
-An interactive data science and analytics dashboard built using **Streamlit**, **Pandas**, and **Scikit-Learn** to analyze historical Formula 1 race dynamics. This project leverages historical grand prix data to uncover driver performance patterns, track-specific behaviors, and pit-stop strategies using machine learning.
+Welcome to the **Formula 1 Pit Stop Optimizer**, a comprehensive data visualization dashboard built with Python and Streamlit. This application analyzes historical Formula 1 race data to optimize pit stop strategies, visualize lap times, and provide in-depth performance metrics for drivers and constructors.
 
----
+## ✨ Key Features
 
-## 🚀 Key Features
+*   **Dynamic Photorealistic Backgrounds:** The dashboard automatically changes its background to match the selected race! It features a curated mapping of 79 unique F1 circuits, accurately displaying night races, street circuits, desert tracks, and classic European circuits with real aerial photographs.
+*   **Premium Glassmorphic UI:** A beautifully customized Dark Theme UI with glass-like translucent panels, ensuring high readability and a modern, state-of-the-art aesthetic.
+*   **KPI Metrics Dashboard:** Instant top-level insights showing Average Lap Time, Fastest Lap, Total Pit Stops, and Total Pit Time at a glance.
+*   **Advanced Telemetry Visualizations:** Interactive Plotly charts allowing you to analyze lap time consistency, tire degradation, and comparative performance between drivers.
+*   **K-Means Strategy Clustering:** Employs Machine Learning (`scikit-learn`) to cluster pit stop strategies based on lap times and durations, identifying the most optimal strategies for a given race.
+*   **Team Colors:** Automatically color-codes data visualizations using the official F1 Constructor hex colors (e.g., Red Bull Blue, Ferrari Red, Mercedes Silver) for immediate recognition.
 
-### 1. Circuit Clustering Engine (Machine Learning)
-* **K-Means Algorithm:** Groups historical Formula 1 circuits into structural categories based on performance metrics (e.g., average lap times, pit stop overheads, pit stop durations).
-* **Interactive Exploration:** Select the number of clusters dynamically via a sidebar slider to see how different tracks categorize relative to one another.
+## 🛠️ Technology Stack
 
-### 2. General Performance Metrics & Distributions
-* **Pit Stop Duration Distribution:** Visualizes the spread and frequency of pit stop times across different eras and tracks using interactive Plotly histograms.
-* **Outlier Detection:** Highlights exceptionally fast or slow stops to analyze crew efficiency versus mechanical anomalies.
+*   **Python** (Core Logic)
+*   **Streamlit** (Web Application Framework)
+*   **Pandas** (Data Manipulation & Caching)
+*   **Plotly Express** (Interactive Charting)
+*   **Scikit-Learn** (K-Means Machine Learning)
 
-### 3. Session-Specific Race Analytics
-* **Driver Lap-by-Lap Tracking:** Tracks individual driver position changes, lap-time consistency, and pace decline over a race distance.
-* **Pit Stop Impact Analysis:** Breaks down exactly how a pit stop strategy influences a driver’s track position and overall race progression.
+## 🚀 How to Run Locally
 
----
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Hrigved88/f1-pitstop.git
+    cd f1-pitstop
+    ```
 
-## 📊 Dashboard Visuals
+2.  **Install the required dependencies:**
+    Ensure you have Python installed, then run:
+    ```bash
+    pip install streamlit pandas plotly scikit-learn
+    ```
 
-Here is a preview of the interactive analytics modules available within the application:
+3.  **Run the application:**
+    ```bash
+    streamlit run app.py
+    ```
+    The application will automatically open in your default web browser at `http://localhost:8501`.
 
-### Circuit Clustering & Characteristics
-![F1 Circuit Clustering via K-Means](Screenshot 2025-09-18 004030.png)
-
-### Pit Stop Duration Trends
-![Pit Stop Distribution Histogram](Screenshot 2025-09-18 030538.png)
-
-### Driver Pace & Lap-by-Lap Metrics
-![Race Lap Tracker Charts](Screenshot 2025-09-18 032624.jpg)
-
----
-
-## 🛠️ Tech Stack & Libraries
-
-* **Frontend Framework:** Streamlit (for building the web UI dashboard)
-* **Data Processing:** Pandas, NumPy
-* **Machine Learning:** Scikit-Learn (K-Means Clustering)
-* **Data Visualization:** Plotly Express / Seaborn / Matplotlib
-
----
-
-## ⚙️ Installation & Local Setup
-
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/YOUR_USERNAME/f1-pit-stop-optimizer.git](https://github.com/YOUR_USERNAME/f1-pit-stop-optimizer.git)
-cd f1-pit-stop-optimizer
-
-### 2. Install Dependencies
-Make sure you have Python installed, then run:
-
-Bash
-pip install streamlit pandas scikit-learn plotly
-3. Run the Dashboard
-Launch the interactive web server locally:
-
-Bash
-streamlit run app.py
+## 📁 Dataset
+This dashboard relies on historical Formula 1 data files (e.g., `lap_times.csv`, `pit_stops.csv`, `circuits.csv`, `results.csv`, `constructors.csv`). Ensure all CSV files are located in the root directory for the application to function correctly.
